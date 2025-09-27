@@ -3,7 +3,7 @@
 **Group:** TAK24  
 **Project:** Boardify - Visual Project Management System  
 **Version:** 1.0  
-**Date:** 27.10.2025
+**Date:** October 2025
 
 ---
 
@@ -197,7 +197,67 @@ Modern teams struggle with:
 
 *User Story 3.1:* As a team member, I want to comment on cards and mention colleagues so that I can communicate about specific tasks.
 
+*Acceptance Criteria:*
+- Add comments with rich text formatting
+- Mention team members using @username
+- Receive notifications for mentions
+- View comment history and timestamps
+
 *User Story 3.2:* As a project manager, I want to assign team members to cards so that responsibility is clear and notifications are sent.
+
+*Acceptance Criteria:*
+- Assign multiple members to cards
+- See assigned members on card faces
+- Automatic notifications to assigned members
+- Filter cards by assigned member
+
+**Epic 4: Workflow Management**
+
+*User Story 4.1:* As a team lead, I want to create custom workflows so that I can match our team's specific processes.
+
+*Acceptance Criteria:*
+- Create custom list sequences
+- Set up workflow templates
+- Configure automation rules
+- Track workflow completion metrics
+
+*User Story 4.2:* As a user, I want to set due dates and priorities so that I can manage time-sensitive tasks effectively.
+
+*Acceptance Criteria:*
+- Set due dates with calendar picker
+- Add priority labels (high, medium, low)
+- Receive due date notifications
+- Sort cards by due date or priority
+
+**Epic 5: Reporting and Analytics**
+
+*User Story 5.1:* As a project manager, I want to view project progress reports so that I can track team performance and identify bottlenecks.
+
+*Acceptance Criteria:*
+- Generate burndown charts
+- View completion statistics
+- Export progress reports
+- Set up automated status updates
+
+**Usage Scenarios:**
+
+**Scenario 1: Software Development Team**
+- Team creates "Sprint Planning" board
+- Lists: Backlog → In Progress → Code Review → Testing → Done
+- Daily standup using board overview
+- Sprint retrospective using completed cards data
+
+**Scenario 2: Marketing Campaign Management** 
+- Create "Product Launch Campaign" board
+- Lists: Ideas → Research → Content Creation → Review → Published
+- Assign content pieces to team members
+- Track campaign timeline with due dates
+
+**Scenario 3: Event Planning**
+- Board: "Annual Conference 2025"
+- Lists: Planning → Vendor Contact → Confirmed → In Progress → Completed
+- Attach vendor contracts and documents
+- Coordinate multiple teams (catering, venue, speakers)
 
 ### 4.2 System Functionality
 
