@@ -741,33 +741,127 @@ graph TB
 
 ### 8.1 Key Screen Mockups and Prototypes
 
-**Main Dashboard:**
-- Workspace navigation sidebar
-- Board grid view with thumbnails
-- Recent boards and starred boards sections
-- Search functionality
-- Create board button
+**Wireframe 1: Main Dashboard**
+┌────────────────────────────────────────────────────────────────┐
+│ Boardify                    🔍 Search    👤 Profile   ⚙️        │
+├──────────┬─────────────────────────────────────────────────────┤
+│          │  My Boards                              + New Board  │
+│          │                                                      │
+│  📋      │  ┌─────────┐  ┌─────────┐  ┌─────────┐            │
+│  Work    │  │ Sprint  │  │Marketing│  │ Design  │            │
+│  📁      │  │ Board   │  │Campaign │  │ Tasks   │            │
+│  Personal│  │ ⭐      │  │         │  │         │            │
+│  ⭐      │  │ 12 cards│  │ 8 cards │  │ 5 cards │            │
+│  Starred │  └─────────┘  └─────────┘  └─────────┘            │
+│          │                                                      │
+│  Recent  │  Recent Boards:                                     │
+│  ───     │  • Project Alpha (Updated 2h ago)                   │
+│          │  • Q4 Planning (Updated yesterday)                  │
+└──────────┴─────────────────────────────────────────────────────┘
 
-**Board View:**
-- Horizontal list layout with drag-and-drop
-- Add list/card buttons
-- Board menu with settings and sharing options
-- Member avatars and activity indicator
-- Board background customization
+**Wireframe 2: Board View (Kanban Layout)**
+┌────────────────────────────────────────────────────────────────┐
+│ ← Boards   Sprint Planning Board    ⭐ 👥 Share  ⚙️ Menu      │
+├────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐ + Add    │
+│  │ To Do   │  │In Progress│ │ Review  │  │  Done   │   List   │
+│  │ ─────   │  │ ───────── │ │ ─────── │  │ ─────── │          │
+│  │         │  │           │ │         │  │         │          │
+│  │┌───────┐│  │┌───────┐ │ │┌───────┐│  │┌───────┐│          │
+│  ││Login  ││  ││API     │ │ ││Testing││  ││Deploy ││          │
+│  ││screen ││  ││integr. │ │ ││       ││  ││       ││          │
+│  ││📅 Oct5││  ││👤 John │ │ ││👤 Mary││  ││✅     ││          │
+│  │└───────┘│  │└───────┘ │ │└───────┘│  │└───────┘│          │
+│  │         │  │           │ │         │  │         │          │
+│  │┌───────┐│  │┌───────┐ │ │         │  │┌───────┐│          │
+│  ││Dashboard││ ││Database│ │ │         │  ││Setup  ││          │
+│  ││design ││  ││update  │ │ │         │  ││CI/CD  ││          │
+│  ││👤 Alex││  ││👤 Sam  │ │ │         │  ││✅     ││          │
+│  │└───────┘│  │└───────┘ │ │         │  │└───────┘│          │
+│  │         │  │           │ │         │  │         │          │
+│  │+ Add    │  │+ Add     │ │+ Add    │  │+ Add    │          │
+│  └─────────┘  └─────────┘  └─────────┘  └─────────┘          │
+└────────────────────────────────────────────────────────────────┘
 
-**Card Detail Modal:**
-- Card title and description editor
-- Due date picker and calendar integration
-- Checklist management
-- Comment section with mentions
-- Attachment area with file preview
-- Member assignment interface
+**Wireframe 3: Card Detail Modal**
+┌────────────────────────────────────────────────────────────────┐
+│ ✕ API Integration Task                                         │
+├────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│ In list: "In Progress"                                   📋 Move│
+│                                                                 │
+│ 👥 Members: [👤 John] [+]                                      │
+│                                                                 │
+│ 🏷️ Labels: [Backend][High Priority]                           │
+│                                                                 │
+│ 📝 Description:                                                │
+│ ┌──────────────────────────────────────────────────────────┐  │
+│ │ Integrate payment gateway API                            │  │
+│ │ - Setup authentication                                   │  │
+│ │ - Test endpoints                                         │  │
+│ └──────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│ ✓ Checklist (2/4):                                             │
+│   ☑ Research API documentation                                 │
+│   ☑ Create test account                                        │
+│   ☐ Implement endpoints                                        │
+│   ☐ Write unit tests                                           │
+│                                                                 │
+│ 📅 Due Date: Oct 10, 2025    ⏰ Reminder: 1 day before         │
+│                                                                 │
+│ 📎 Attachments:                                                │
+│   [📄 api-specs.pdf]  [🔗 Documentation link]                 │
+│                                                                 │
+│ 💬 Activity:                                                   │
+│ ┌──────────────────────────────────────────────────────────┐  │
+│ │ 👤 John: Updated checklist - 2 hours ago                 │  │
+│ │ 👤 Mary: @John please review when ready - 1 day ago      │  │
+│ │ [Write a comment...]                              [Send] │  │
+│ └──────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│ [Archive] [Delete]                                    [Save]   │
+└────────────────────────────────────────────────────────────────┘
 
-**Mobile Interface:**
-- Responsive design for tablet and phone
-- Touch-optimized drag and drop
-- Simplified navigation with bottom tab bar
-- Swipe gestures for card management
+**Wireframe 4: Mobile View**
+Mobile Phone View (375px width):
+┌─────────────────┐
+│ ☰  Boardify  🔔 │
+├─────────────────┤
+│                 │
+│ Sprint Board    │
+│ ═══════════════ │
+│                 │
+│ To Do        ▼  │
+│ ┌─────────────┐ │
+│ │Login screen │ │
+│ │👤 Alex      │ │
+│ │📅 Oct 5     │ │
+│ └─────────────┘ │
+│ ┌─────────────┐ │
+│ │Dashboard    │ │
+│ │design       │ │
+│ └─────────────┘ │
+│                 │
+│ In Progress  ▼  │
+│ ┌─────────────┐ │
+│ │API integr.  │ │
+│ │👤 John      │ │
+│ └─────────────┘ │
+│                 │
+│ [+] Add Card    │
+│                 │
+├─────────────────┤
+│🏠 📋 👤 ⚙️     │
+└─────────────────┘
+
+**Interactive Prototype Features:**
+- Drag-and-drop cards between lists (visual feedback with ghost card)
+- Click card to open detail modal with smooth animation
+- Hover states showing interactive elements
+- Real-time updates with subtle pulse animation
+- Collapsible sidebar on smaller screens
+
 
 ### 8.2 User Experience Principles
 
