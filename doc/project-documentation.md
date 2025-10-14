@@ -468,7 +468,7 @@ classDiagram
         +DateTime createdAt
         +UserSettings settings
     }
-    
+
     class Workspace {
         +UUID id
         +String name
@@ -477,7 +477,15 @@ classDiagram
         +DateTime createdAt
         +WorkspaceSettings settings
     }
-    
+
+    class WorkspaceMember {
+        +UUID id
+        +UUID userId
+        +UUID workspaceId
+        +Role role
+        +DateTime joinedAt
+    }
+
     class Board {
         +UUID id
         +UUID workspaceId
@@ -488,8 +496,8 @@ classDiagram
         +Boolean archived
         +DateTime createdAt
     }
-    
-    class List {
+
+    class CardList {
         +UUID id
         +UUID boardId
         +String name
@@ -497,10 +505,10 @@ classDiagram
         +Boolean archived
         +DateTime createdAt
     }
-    
+
     class Card {
         +UUID id
-        +UUID listId
+        +UUID cardListId
         +String name
         +Text description
         +Integer position
@@ -509,7 +517,7 @@ classDiagram
         +Boolean archived
         +DateTime createdAt
     }
-    
+
     class Comment {
         +UUID id
         +UUID cardId
@@ -517,14 +525,14 @@ classDiagram
         +Text content
         +DateTime createdAt
     }
-    
-    Workspace ||--o{ Board : contains
-    Board ||--o{ List : contains
-    List ||--o{ Card : contains
-    Card ||--o{ Comment : has
-    User ||--o{ Comment : writes
-    User }|--|| WorkspaceMember : belongs
-    WorkspaceMember }|--|| Workspace : in
+
+    Workspace --> Board
+    Board --> CardList
+    CardList --> Card
+    Card --> Comment
+    User --> Comment
+    User --> WorkspaceMember
+    WorkspaceMember --> Workspace
 ```
 
 ### 6.3 Entity Relationships
